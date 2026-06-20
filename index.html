@@ -1,13 +1,192 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Shattarika - My Diary</title>
+<title>Shattarika - A Cosmic Diary</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:
+    radial-gradient(circle at top, #1a1f4b 0%, #090b17 40%, #020308 100%);
+    color:white;
+    font-family: 'Trebuchet MS', sans-serif;
+    min-height:100vh;
+}
+
+.hero{
+    text-align:center;
+    padding-top:120px;
+    padding-bottom:100px;
+}
+
+.hero h1{
+    font-size:5rem;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:1.5rem;
+    opacity:0.8;
+}
+
+nav{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+    margin-bottom:60px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    padding:12px 24px;
+    border:1px solid rgba(255,255,255,0.3);
+    border-radius:30px;
+    transition:0.3s;
+}
+
+nav a:hover{
+    background:white;
+    color:black;
+}
+
+.container{
+    width:85%;
+    max-width:1000px;
+    margin:auto;
+}
+
+.card{
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(10px);
+    border-radius:20px;
+    padding:30px;
+    margin-bottom:30px;
+}
+
+.card h2{
+    margin-bottom:15px;
+}
+
+.card p{
+    line-height:1.8;
+}
+
+.quote{
+    text-align:center;
+    font-style:italic;
+    opacity:0.7;
+    margin-top:60px;
+    margin-bottom:60px;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    opacity:0.5;
+}
+
+.star{
+    position:fixed;
+    width:2px;
+    height:2px;
+    background:white;
+    border-radius:50%;
+    animation:twinkle 3s infinite;
+}
+
+@keyframes twinkle{
+    50%{
+        opacity:0.2;
+    }
+}
+
+</style>
 </head>
+
 <body>
-    <h1>Shattarika - My Diary 🌙✨</h1>
 
-    <p>Hi, I'm Stuti.</p>
+<div class="star" style="top:10%; left:20%;"></div>
+<div class="star" style="top:30%; left:80%;"></div>
+<div class="star" style="top:60%; left:15%;"></div>
+<div class="star" style="top:80%; left:70%;"></div>
+<div class="star" style="top:15%; left:60%;"></div>
 
-    <p>Welcome to my little corner of the universe.</p>
+<div class="hero">
+<h1>🌙 Shattarika ✨</h1>
+<p>A Cosmic Diary</p>
+</div>
+
+<nav>
+<a href="#">Home</a>
+<a href="research.html">Research</a>
+<a href="notes.html">Notes</a>
+<a href="facts.html">Space Facts</a>
+<a href="youtube.html">YouTube</a>
+</nav>
+
+<div class="container">
+
+<div class="card">
+<h2>Welcome</h2>
+
+<p>
+Hi, I'm Stuti.
+</p>
+
+<br>
+
+<p>
+Welcome to my little corner of the universe.
+</p>
+
+<br>
+
+<p>
+I am an MSc Astrophysics student, astronomy educator in the making, and a lifelong learner fascinated by stars, galaxies, black holes, and the mysteries of the cosmos.
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>Current Focus</h2>
+
+<p>
+🎥 Astronomy Content Creation<br><br>
+🔭 Observational Astronomy Research<br><br>
+📚 Building Astronomy Resources for Students
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>Recent Research</h2>
+
+<p>
+Estimation of the Age and Metallicity of the Globular Cluster NGC 2808 through Color-Magnitude Diagram analysis and isochrone fitting.
+</p>
+
+</div>
+
+<div class="quote">
+"Somewhere, something incredible is waiting to be known."
+</div>
+
+</div>
+
+<footer>
+Created with curiosity and starlight ✨
+</footer>
+
 </body>
 </html>
