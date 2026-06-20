@@ -1,5 +1,5 @@
-# README_stuti-traceastro
-# Cosmic Diary 🌙✨
+# stuti-traceastro
+# Shattarika - A Cosmic Diary 🌙✨
 
 Hi, I'm Stuti.
 
