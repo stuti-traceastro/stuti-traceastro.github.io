@@ -4,7 +4,9 @@
 <head>
 
 <title>शत्तारिका | Shattarika</title>
+
 <link rel="icon" type="image/png" href="S.png">
+
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
@@ -28,13 +30,15 @@ body{
 /* HERO SECTION */
 
 .hero{
+
     height:100vh;
 
-    background:
-    radial-gradient(circle at top, #273469 0%, #12172d 35%, #020308 100%);
+    background-image:url('bg.jpg');
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
 
     display:flex;
-    flex-direction:column;
     justify-content:center;
     align-items:center;
 
@@ -45,53 +49,85 @@ body{
 }
 
 .hero::before{
+
     content:"";
+
     position:absolute;
     inset:0;
 
-    background:
-    radial-gradient(white 1px, transparent 1px);
-
-    background-size:80px 80px;
-
-    opacity:0.15;
+    background:rgba(0,0,0,0.55);
 }
 
 .hero-content{
+
     position:relative;
     z-index:2;
 }
+
+/* LOGO */
+
 .logo{
-    width:180px;
+
+    width:170px;
     height:auto;
+
     margin-bottom:25px;
 
     border-radius:50%;
 
     box-shadow:
-    0 0 20px rgba(255,255,255,0.15),
-    0 0 50px rgba(255,255,255,0.08);
+    0 0 25px rgba(255,255,255,0.25),
+    0 0 60px rgba(255,255,255,0.12);
+
+    transition:0.3s;
 }
+
+.logo:hover{
+
+    transform:scale(1.05);
+}
+
+/* TITLE */
+
 .sanskrit{
+
     font-family:'Noto Sans Devanagari', serif;
-    font-size:5rem;
+
+    font-size:6rem;
+
     font-weight:700;
+
+    text-shadow:
+    0 0 20px rgba(255,255,255,0.4),
+    0 0 40px rgba(255,255,255,0.2);
 }
 
 .english{
-    font-size:1.8rem;
-    letter-spacing:8px;
+
+    font-size:2rem;
+
+    letter-spacing:10px;
+
     margin-top:10px;
 }
 
 .tagline{
+
     margin-top:20px;
-    font-size:1.3rem;
-    opacity:0.8;
+
+    font-size:1.2rem;
+
+    letter-spacing:3px;
+
+    opacity:0.9;
 }
 
+/* BUTTON */
+
 .enter-btn{
+
     display:inline-block;
+
     margin-top:40px;
 
     padding:15px 35px;
@@ -108,6 +144,7 @@ body{
 }
 
 .enter-btn:hover{
+
     background:white;
     color:black;
 }
@@ -115,21 +152,34 @@ body{
 /* NAVIGATION */
 
 nav{
+
+    position:sticky;
+    top:0;
+
+    z-index:100;
+
     display:flex;
     justify-content:center;
     gap:15px;
+
     flex-wrap:wrap;
 
-    padding:30px;
+    padding:20px;
+
+    background:rgba(0,0,0,0.75);
+
+    backdrop-filter:blur(12px);
 }
 
 nav a{
+
     color:white;
+
     text-decoration:none;
 
     padding:12px 24px;
 
-    border:1px solid rgba(255,255,255,0.3);
+    border:1px solid rgba(255,255,255,0.25);
 
     border-radius:30px;
 
@@ -137,6 +187,7 @@ nav a{
 }
 
 nav a:hover{
+
     background:white;
     color:black;
 }
@@ -144,49 +195,97 @@ nav a:hover{
 /* CONTENT */
 
 .container{
+
     width:85%;
     max-width:1000px;
+
     margin:auto;
+
+    padding-top:40px;
 }
 
+/* CARDS */
+
 .card{
+
     background:rgba(255,255,255,0.05);
 
     border:1px solid rgba(255,255,255,0.08);
 
-    backdrop-filter:blur(10px);
+    backdrop-filter:blur(12px);
 
     border-radius:20px;
 
     padding:30px;
 
     margin-bottom:30px;
+
+    transition:0.3s;
+}
+
+.card:hover{
+
+    transform:translateY(-5px);
 }
 
 .card h2{
+
     margin-bottom:15px;
 }
 
 .card p{
+
     line-height:1.9;
 }
 
+/* QUOTE */
+
 .quote{
+
     text-align:center;
+
     font-style:italic;
 
-    opacity:0.7;
+    opacity:0.75;
 
-    margin-top:60px;
-    margin-bottom:60px;
+    margin-top:70px;
+    margin-bottom:70px;
 
-    font-size:1.2rem;
+    font-size:1.25rem;
 }
 
+/* FOOTER */
+
 footer{
+
     text-align:center;
+
     padding:40px;
+
     opacity:0.5;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .logo{
+        width:120px;
+    }
+
+    .sanskrit{
+        font-size:3rem;
+    }
+
+    .english{
+        font-size:1.2rem;
+        letter-spacing:5px;
+    }
+
+    .tagline{
+        font-size:1rem;
+    }
+
 }
 
 </style>
@@ -210,7 +309,7 @@ SHATTARIKA
 </div>
 
 <div class="tagline">
-A Cosmic Diary
+Astronomy • Research • Education • Wonder
 </div>
 
 <a href="#content" class="enter-btn">
@@ -218,6 +317,7 @@ Enter the Cosmos ✨
 </a>
 
 </div>
+
 </section>
 
 <nav>
@@ -280,7 +380,7 @@ I am an MSc Astrophysics student, astronomy educator in the making, and a lifelo
 
 <p>
 
-Estimation of the Age and Metallicity of the Globular Cluster NGC 2808 through Color-Magnitude Diagram analysis and isochrone fitting.
+Estimation of the Age and Metallicity of the Globular Cluster NGC 2808 through Color-Magnitude Diagram Analysis and Isochrone Fitting.
 
 </p>
 
@@ -288,7 +388,11 @@ Estimation of the Age and Metallicity of the Globular Cluster NGC 2808 through C
 
 <div class="quote">
 
-"Somewhere, something incredible is waiting to be known."
+“Somewhere, something incredible is waiting to be known.”
+
+<br><br>
+
+— Carl Sagan
 
 </div>
 
