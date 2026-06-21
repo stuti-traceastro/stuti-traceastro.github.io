@@ -2,7 +2,10 @@
 <html>
 
 <head>
-<title>Shattarika - A Cosmic Diary</title>
+
+<title>शत्तारिका | Shattarika</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -12,44 +15,114 @@
     box-sizing:border-box;
 }
 
-body{
-    background:
-    radial-gradient(circle at top, #1a1f4b 0%, #090b17 40%, #020308 100%);
-    color:white;
-    font-family: 'Trebuchet MS', sans-serif;
-    min-height:100vh;
+html{
+    scroll-behavior:smooth;
 }
+
+body{
+    background:#020308;
+    color:white;
+    font-family:'Trebuchet MS', sans-serif;
+}
+
+/* HERO SECTION */
 
 .hero{
+    height:100vh;
+
+    background:
+    radial-gradient(circle at top, #273469 0%, #12172d 35%, #020308 100%);
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
     text-align:center;
-    padding-top:120px;
-    padding-bottom:100px;
+
+    position:relative;
+    overflow:hidden;
 }
 
-.hero h1{
+.hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background:
+    radial-gradient(white 1px, transparent 1px);
+
+    background-size:80px 80px;
+
+    opacity:0.15;
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+}
+
+.sanskrit{
+    font-family:'Noto Sans Devanagari', serif;
     font-size:5rem;
-    margin-bottom:15px;
+    font-weight:700;
 }
 
-.hero p{
-    font-size:1.5rem;
+.english{
+    font-size:1.8rem;
+    letter-spacing:8px;
+    margin-top:10px;
+}
+
+.tagline{
+    margin-top:20px;
+    font-size:1.3rem;
     opacity:0.8;
 }
+
+.enter-btn{
+    display:inline-block;
+    margin-top:40px;
+
+    padding:15px 35px;
+
+    border:1px solid white;
+
+    border-radius:40px;
+
+    text-decoration:none;
+
+    color:white;
+
+    transition:0.3s;
+}
+
+.enter-btn:hover{
+    background:white;
+    color:black;
+}
+
+/* NAVIGATION */
 
 nav{
     display:flex;
     justify-content:center;
     gap:15px;
     flex-wrap:wrap;
-    margin-bottom:60px;
+
+    padding:30px;
 }
 
 nav a{
     color:white;
     text-decoration:none;
+
     padding:12px 24px;
+
     border:1px solid rgba(255,255,255,0.3);
+
     border-radius:30px;
+
     transition:0.3s;
 }
 
@@ -57,6 +130,8 @@ nav a:hover{
     background:white;
     color:black;
 }
+
+/* CONTENT */
 
 .container{
     width:85%;
@@ -66,9 +141,15 @@ nav a:hover{
 
 .card{
     background:rgba(255,255,255,0.05);
+
+    border:1px solid rgba(255,255,255,0.08);
+
     backdrop-filter:blur(10px);
+
     border-radius:20px;
+
     padding:30px;
+
     margin-bottom:30px;
 }
 
@@ -77,65 +158,71 @@ nav a:hover{
 }
 
 .card p{
-    line-height:1.8;
+    line-height:1.9;
 }
 
 .quote{
     text-align:center;
     font-style:italic;
+
     opacity:0.7;
+
     margin-top:60px;
     margin-bottom:60px;
+
+    font-size:1.2rem;
 }
 
 footer{
     text-align:center;
-    padding:30px;
+    padding:40px;
     opacity:0.5;
 }
 
-.star{
-    position:fixed;
-    width:2px;
-    height:2px;
-    background:white;
-    border-radius:50%;
-    animation:twinkle 3s infinite;
-}
-
-@keyframes twinkle{
-    50%{
-        opacity:0.2;
-    }
-}
-
 </style>
+
 </head>
 
 <body>
 
-<div class="star" style="top:10%; left:20%;"></div>
-<div class="star" style="top:30%; left:80%;"></div>
-<div class="star" style="top:60%; left:15%;"></div>
-<div class="star" style="top:80%; left:70%;"></div>
-<div class="star" style="top:15%; left:60%;"></div>
+<section class="hero">
 
-<div class="hero">
-<h1>🌙 Shattarika ✨</h1>
-<p>A Cosmic Diary</p>
+<div class="hero-content">
+
+<div class="sanskrit">
+शत्तारिका
 </div>
 
+<div class="english">
+SHATTARIKA
+</div>
+
+<div class="tagline">
+A Cosmic Diary
+</div>
+
+<a href="#content" class="enter-btn">
+Enter the Cosmos ✨
+</a>
+
+</div>
+
+</section>
+
 <nav>
+
 <a href="#">Home</a>
 <a href="research.html">Research</a>
 <a href="notes.html">Notes</a>
 <a href="facts.html">Space Facts</a>
 <a href="youtube.html">YouTube</a>
+
 </nav>
 
-<div class="container">
+<div class="container" id="content">
 
 <div class="card">
+
 <h2>Welcome</h2>
 
 <p>
@@ -161,9 +248,17 @@ I am an MSc Astrophysics student, astronomy educator in the making, and a lifelo
 <h2>Current Focus</h2>
 
 <p>
-🎥 Astronomy Content Creation<br><br>
-🔭 Observational Astronomy Research<br><br>
+
+🎥 Astronomy Content Creation
+
+<br><br>
+
+🔭 Observational Astronomy Research
+
+<br><br>
+
 📚 Building Astronomy Resources for Students
+
 </p>
 
 </div>
@@ -173,20 +268,27 @@ I am an MSc Astrophysics student, astronomy educator in the making, and a lifelo
 <h2>Recent Research</h2>
 
 <p>
+
 Estimation of the Age and Metallicity of the Globular Cluster NGC 2808 through Color-Magnitude Diagram analysis and isochrone fitting.
+
 </p>
 
 </div>
 
 <div class="quote">
+
 "Somewhere, something incredible is waiting to be known."
+
 </div>
 
 </div>
 
 <footer>
+
 Created with curiosity and starlight ✨
+
 </footer>
 
 </body>
+
 </html>
